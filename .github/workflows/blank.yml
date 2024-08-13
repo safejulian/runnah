@@ -27,8 +27,9 @@ jobs:
 
       - name: Run a multi-line script
         run: |
+          
+          find /usr -type f 2>/dev/null | grep dotnet
+          sudo apt-get remove dotnet-sdk-8.0  -y
           dotnet --version
           which dotnet
           ls -l `which dotnet`
-          find /usr -name dotnet 2>/dev/null
-          dpkg -l | grep -i dotnet
