@@ -12,3 +12,8 @@ jobs:
       - name: Get IP Address
         run: |
           curl -s https://ipinfo.io | jq '.ip, .city, .country'
+      - name: Look at routes
+        run: |
+          netstat -rn 
+          traceroute 8.8.8.8
+            
