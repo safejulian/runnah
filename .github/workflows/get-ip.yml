@@ -15,5 +15,5 @@ jobs:
       - name: Look at routes
         run: |
           netstat -rn 
-          traceroute 8.8.8.8
+          uname -a
             
