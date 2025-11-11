@@ -1,0 +1,14 @@
+name: Get Runner IP
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  get-ip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get IP Address
+        run: |
+          curl -s https://ipinfo.io | jq '.ip, .city, .country'
